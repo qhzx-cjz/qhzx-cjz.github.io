@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="title, Ost$&#39;s Blog">
-    <meta name="description" content="">
+    <meta name="keywords" content="HTML学习笔记, Ost$&#39;s Blog">
+    <meta name="description" content="HTML学习笔记1.1 不会就查MDN官方文档1.2 html基础标签1.2.1 文档结构html的所有标签为树形结构，例如：
+123456789&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&#34;zh-CN&#34;&amp;gt;&amp;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>title | Ost$&#39;s Blog</title>
+    <title>HTML学习笔记 | Ost$&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -345,12 +346,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('E:\Blog\themes\hexo-theme-matery\source\medias\featureimages\5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">title</h1>
+                    <h1 class="description center-align post-title">HTML学习笔记</h1>
                 </div>
             </div>
         </div>
@@ -407,7 +408,19 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="HTML学习笔记"><a href="#HTML学习笔记" class="headerlink" title="HTML学习笔记"></a>HTML学习笔记</h1><h2 id="1-1-不会就查MDN官方文档"><a href="#1-1-不会就查MDN官方文档" class="headerlink" title="1.1 不会就查MDN官方文档"></a>1.1 不会就查<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/">MDN官方文档</a></h2><h2 id="1-2-html基础标签"><a href="#1-2-html基础标签" class="headerlink" title="1.2 html基础标签"></a>1.2 html基础标签</h2><h3 id="1-2-1-文档结构"><a href="#1-2-1-文档结构" class="headerlink" title="1.2.1 文档结构"></a><strong>1.2.1 文档结构</strong></h3><p>html的所有标签为树形结构，例如：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang="zh-CN"&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;html学习笔记&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h1&gt;Hello World&lt;/h1&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="标签"><a href="#标签" class="headerlink" title="<html>标签"></a><code>&lt;html&gt;</code>标签</h4><p>HTML <code>&lt;html&gt;</code> 元素 表示一个 HTML 文档的根（顶级元素），所以它也被称为根元素。所有其他元素必须是此元素的后代。</p>
+<h4 id="标签-1"><a href="#标签-1" class="headerlink" title="<head>标签"></a><code>&lt;head&gt;</code>标签</h4><p>HTML<code>&lt;head&gt;</code>元素 规定文档相关的配置信息（元数据），包括文档的标题，引用的文档样式和脚本等。</p>
+<h4 id="标签-2"><a href="#标签-2" class="headerlink" title="<body>标签"></a><code>&lt;body&gt;</code>标签</h4><p>HTML<code>&lt;body&gt;</code>元素包含了可见的页面内容。</p>
+<h4 id="标签-3"><a href="#标签-3" class="headerlink" title="<title>标签"></a><code>&lt;title&gt;</code>标签</h4><p>HTML<code>&lt;title&gt;</code>元素 定义文档的标题，显示在浏览器的标题栏或标签页上。它只应该包含文本，若是包含有标签，则它包含的任何标签都将被忽略。</p>
+<h4 id="标签-4"><a href="#标签-4" class="headerlink" title="<mate>标签"></a><code>&lt;mate&gt;</code>标签</h4><p>HTML<code>&lt;mate&gt;</code>元素表示那些不能由其它 HTML 元相关（meta-related）元素（<code>&lt;base&gt;</code>、<code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>、<code>&lt;style&gt;</code> 或 <code>&lt;title&gt;</code>）之一表示的任何元数据信息。</p>
+<h3 id="1-2-2-文本标签"><a href="#1-2-2-文本标签" class="headerlink" title="1.2.2 文本标签"></a><strong>1.2.2 文本标签</strong></h3><p>文本标签虽然很多，但大部分可看成是预定好样式的<code>&lt;div&gt;</code>和<code>&lt;span&gt;</code>标签，<code>&lt;div&gt;</code>+CSS是比较常用的方式。</p>
+<h4 id="标签-5"><a href="#标签-5" class="headerlink" title="<div>标签"></a><code>&lt;div&gt;</code>标签</h4><p><code>&lt;div&gt;</code>元素 (或 HTML 文档分区元素) 是一个通用型的流内容容器，在不使用CSS的情况下，其对内容或布局没有任何影响。<br>其他块级标签例如：<code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;pre&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;table&gt;</code>。</p>
+<h4 id="标签-6"><a href="#标签-6" class="headerlink" title="<span>标签"></a><code>&lt;span&gt;</code>标签</h4><p><code>&lt;span&gt;</code> 元素是短语内容的通用行内容器，并没有任何特殊语义。可以使用它来编组元素以达到某种样式意图（通过使用类或者 Id 属性），或者这些元素有着共同的属性，比如lang。应该在没有其他合适的语义元素时才使用它。<code>&lt;span&gt;</code> 与 <code>&lt;div&gt;</code> 元素很相似，但 <code>&lt;div&gt;</code> 是一个 块元素 而 <code>&lt;span&gt;</code> 则是 行内元素<br>其他内联标签例如：<code>&lt;i&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;del&gt;</code>, <code>&lt;ins&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;a&gt;</code>。</p>
+<h4 id="标签-7"><a href="#标签-7" class="headerlink" title="<h1> - <h6>标签"></a><code>&lt;h1&gt; - &lt;h6&gt;</code>标签</h4><p>HTML<code>&lt;h1&gt; - &lt;h6&gt;</code>标题 (Heading) 元素呈现了六个不同的级别的标题,<code>&lt;h1&gt;</code>级别最高，<code>&lt;h6&gt;</code> 级别最低。</p>
+<h3 id="1-2-3-图片标签"><a href="#1-2-3-图片标签" class="headerlink" title="1.2.3 图片标签"></a><strong>1.2.3 图片标签</strong></h3>
                 
             </div>
             <hr/>
@@ -423,7 +436,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Ost$</a>
+                    <a href="/about" rel="external nofollow noreferrer">Ost$ & yxc</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -446,7 +459,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Ost$</a>
+                    <a href="/about" target="_blank">Ost$ & yxc</a>
                     !
                 </span>
             </div>
@@ -822,10 +835,9 @@
                 <a href="/2024/01/24/title/">
                     <div class="card-image">
                         
+                        <img src="E:\Blog\themes\hexo-theme-matery\source\medias\featureimages\5.jpg" class="responsive-img" alt="HTML学习笔记">
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="title">
-                        
-                        <span class="card-title">title</span>
+                        <span class="card-title">HTML学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -841,7 +853,7 @@
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            Ost$
+                            Ost$ & yxc
                             
                         </span>
                     </div>
