@@ -444,6 +444,25 @@
 </ul>
 <p>下例包含了多个 <code>&lt;source&gt;</code> 元素。如果能够播放的话，浏览器就会试图去加载第一个 <code>&lt;source&gt;</code> 元素；如果不行，那就退而求其次去加载第二个。</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio controls&gt;</span><br><span class="line">    &lt;source src="/audios/03-爆弾魔.flac" type="audio/mpeg"/&gt;</span><br><span class="line">    &lt;source src="/audios/10. 六月は雨上がりの街を書く.flac" type="audio/mpeg"/&gt;</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="标签-9"><a href="#标签-9" class="headerlink" title="<video>标签"></a><code>&lt;video&gt;</code>标签</h4><p>HTML <code>&lt;video&gt;</code> 元素 用于在 HTML 或者 XHTML 文档中嵌入媒体播放器，用于支持文档内的视频播放。你也可以将 <code>&lt;video&gt;</code> 标签用于音频内容，但是 <code>&lt;audio&gt;</code> 元素可能在用户体验上更合适。</p>
+<p>示例</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;video controls width="800"&gt;</span><br><span class="line">    &lt;source src="/videos/video1.mp4"</span><br><span class="line">            type="video/mp4"&gt;</span><br><span class="line">    &lt;source src="/videos/video2.mp4"</span><br><span class="line">            type="video/mp4"&gt;</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="1-2-5-超链接"><a href="#1-2-5-超链接" class="headerlink" title="1.2.5 超链接"></a><strong>1.2.5 超链接</strong></h3><p>HTML <code>&lt;a&gt;</code> 元素（或称锚元素）可以通过它的 href 属性创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他 URL 的超链接。<code>&lt;a&gt;</code> 中的内容应该指明链接的意图。如果存在 href 属性，当 <code>&lt;a&gt;</code> 元素聚焦时按下回车键就会激活它。</p>
+<p>示例</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href="https://ostrichssss.top/" target="_blank"&gt;</span><br><span class="line">      &lt;img src="/images/225.jpg" alt="Alice"&gt;</span><br><span class="line">  &lt;/a&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><p>任何内容都可作为链接出现，只需要将它包裹在锚点元素<code>&lt;a&gt;</code>内</p>
+</li>
+<li><p>点击链接打开新标签页面时加入属性：<code>target="_blank"</code></p>
+</li>
+</ul>
+<h3 id="1-2-6-表单"><a href="#1-2-6-表单" class="headerlink" title="1.2.6 表单"></a><strong>1.2.6 表单</strong></h3><h4 id="标签-10"><a href="#标签-10" class="headerlink" title="<form>标签"></a><code>&lt;form&gt;</code>标签</h4><p>HTML <code>&lt;form&gt;</code> 元素表示文档中的一个区域，此区域包含交互控件，用于向 Web 服务器提交信息。</p>
+<h4 id="元素"><a href="#元素" class="headerlink" title="<label>元素"></a><code>&lt;label&gt;</code>元素</h4><p>HTML <code>&lt;label&gt;</code> 元素（标签）表示用户界面中某个元素的说明。将一个 <code>&lt;label&gt;</code> 和一个 <code>&lt;input&gt;</code> 元素匹配在一起，需要给 <code>&lt;input&gt;</code> 一个 id 属性。而 <code>&lt;label&gt;</code> 需要一个 for 属性，其值和 <code>&lt;input&gt;</code> 的 id 一样。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;label for="cheese"&gt;Do you like cheese?&lt;/label&gt;</span><br><span class="line">&lt;input type="checkbox" name="cheese" id="cheese" /&gt;</span><br></pre></td></tr></tbody></table></figure>
+
                 
             </div>
             <hr/>
