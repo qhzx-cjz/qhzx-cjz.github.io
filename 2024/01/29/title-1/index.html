@@ -5,7 +5,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="git学习">
-    <meta name="description" content="">
+    <meta name="description" content="Git1. git基本概念
+工作区：仓库的目录
+暂存区：数据暂时存放的区域，类似于工作区写入版本库前的缓存区。暂存区是独立于各个分支的。
+版本库：存放所有已经提交到本地仓库的代码版本
+版本结构：树结构，树中每个节点代表一个代码版本。
+
+**">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -411,7 +417,60 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="1-git基本概念"><a href="#1-git基本概念" class="headerlink" title="1. git基本概念"></a><strong>1. git基本概念</strong></h2><ul>
+<li>工作区：仓库的目录</li>
+<li>暂存区：数据暂时存放的区域，类似于工作区写入版本库前的缓存区。暂存区是独立于各个分支的。</li>
+<li>版本库：存放所有已经提交到本地仓库的代码版本</li>
+<li>版本结构：树结构，树中每个节点代表一个代码版本。</li>
+</ul>
+<h2 id="2-git常用命令"><a href="#2-git常用命令" class="headerlink" title="**2. git常用命令"></a>**2. git常用命令</h2><ol>
+<li><p><code>git config --global user.name XXX</code>：设置全局用户名，信息记录在<code>~/.gitconfig</code>文件中。</p>
+</li>
+<li><p><code>git config --global user.email XXX</code>：设置全局邮箱地址，信息记录在<code>~/.gitconfig</code>文件中。</p>
+</li>
+<li><p><code>git init</code>：将当前目录配置成git仓库，信息记录在隐藏的<code>.git</code>文件夹中</p>
+</li>
+<li><p><code>git add xxx</code>：将xxx文件添加到暂存区</p>
+<ul>
+<li><code>git add .</code>: 将所有待加入暂存区的文件加入暂存区</li>
+</ul>
+</li>
+<li><p><code>git rm --cached xx</code>：将xx文件从暂存区域移除，但仍然保留在当前工作目录中，换句话说，仅是从跟踪清单中删除。</p>
+</li>
+<li><p><code>git commit -m "备注信息"</code>： 将暂存区的内容提交到当前分支</p>
+</li>
+<li><p><code>git status</code>：查看仓库状态，会显示如下信息。</p>
+<ul>
+<li>当前分支的名称</li>
+<li>暂存区文件与当前HEAD提交的关系</li>
+<li>工作区中未提交到暂存区中的文件</li>
+<li>工作区中没有被Git跟踪的路径</li>
+</ul>
+</li>
+<li><p><code>git diff xx</code>：查看工作区中的xx文件相对于暂存区修改了哪些内容</p>
+</li>
+<li><p><code>git log</code>：查看当前分支中的所有版本</p>
+</li>
+<li><p><code>git relog</code>：查看HEAD指针的<strong>移动</strong>历史</p>
+</li>
+<li><p><code>git reset --hard HEAD^</code>：将代码库向上回滚一个版本（^的个数决定回滚的次数）</p>
+<ul>
+<li><code>git reset --hard HEAD~X</code>：向上回滚X个版本</li>
+<li><code>git reset --hard 版本号</code>：回滚到某一特定版本</li>
+</ul>
+</li>
+<li><p><code>git restore XX</code>或<code>git checkout  - XX</code>：将XX文件尚未加入暂存区的<strong>修改</strong>全部撤销，如果暂存区无内容，就比较HEAD指向的版本</p>
+</li>
+<li><p><code>git remote add origin git@git.github.com:xxx/XXX.git</code>：将本地仓库关联到远程仓库</p>
+</li>
+<li><p><code>git push -u</code>（第一次需要-u）：将当前分支推送到远程仓库</p>
+<ul>
+<li><code>git push origin branch_name</code>：将本地的某个分支推送到远程仓库</li>
+</ul>
+</li>
+<li></li>
+</ol>
+
                 
             </div>
             <hr/>
