@@ -437,6 +437,86 @@
 <li>作用范围为多个页面</li>
 </ul>
 <h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/* 注释 */</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="2-选择器"><a href="#2-选择器" class="headerlink" title="2. 选择器"></a>2. 选择器</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Selectors">CSS选择器</a></p>
+<h3 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">div {</span><br><span class="line">    background-color: lightcoral;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    margin-bottom: 10px;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#text-1 {</span><br><span class="line">    background-color: lightblue;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    margin-bottom: 10px;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li>选择所有id为text-1的标签</li>
+</ul>
+<h3 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.big {</span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 300px;</span><br><span class="line">}</span><br><span class="line">.red {</span><br><span class="line">    background-color: red;</span><br><span class="line">}</span><br><span class="line">/* &lt;p class="big red"&gt;4&lt;/p&gt; */</span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li>选择所有<code>big</code>和<code>red</code>类的标签</li>
+<li>一个标签可以处于多个类中</li>
+<li>每个类根据在css文件中的顺序依次生效</li>
+</ul>
+<h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3><p>用于定义元素的特殊状态</p>
+<p>链接伪类选择器：</p>
+<ul>
+<li><code>:link</code>：链接访问前的样式</li>
+<li><code>:visited</code>：链接访问后的样式</li>
+<li><code>:hover</code>：鼠标悬停时的样式</li>
+<li><code>:active</code>：鼠标点击后长按的样式</li>
+<li><code>:focus</code>：光标聚焦后的样式</li>
+</ul>
+<h3 id="位置伪类选择器"><a href="#位置伪类选择器" class="headerlink" title="位置伪类选择器"></a>位置伪类选择器</h3><ul>
+<li><p><code>X:nth-child(n)</code>：选择X这个父标签下的第n个子元素的所有元素</p>
+</li>
+<li><p><code>X:nth-child()</code>：选择X这个父标签下的第an+b个子元素的所有元素</p>
+</li>
+</ul>
+<h3 id="目标伪类选择器"><a href="#目标伪类选择器" class="headerlink" title="目标伪类选择器"></a>目标伪类选择器</h3><ul>
+<li><code>:target</code>：当url指向该元素时生效</li>
+</ul>
+<h3 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h3><p>由两个及以上的基础选择器组合而成的选择器</p>
+<ul>
+<li><p><code>element1,element2</code>：”,”同时选择element1元素和element2元素</p>
+</li>
+<li><p><code>element.class</code>：选择包含了某类的element元素</p>
+</li>
+<li><p><code>element1+element2</code>：选择紧跟element1的element2元素</p>
+</li>
+<li><p><code>element1&gt;element2</code>：选择父标签是element1的element2元素</p>
+</li>
+</ul>
+<h3 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h3><ul>
+<li><code>*</code>：选择所有标签</li>
+<li><code>[attribute]</code>：选择具有某个属性的所有标签</li>
+<li><code>[attribute=value]</code>：选择attribute值为value的所有标签</li>
+</ul>
+<h3 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h3><ul>
+<li><code>::first-letter</code>：选择第一个字母</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p::first-letter{</span><br><span class="line">    font-size:110%;  </span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">/* 将p标签的第一个字母放大110% */</span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li><p><code>::first-line</code>：选择第一行</p>
+</li>
+<li><p><code>::selection</code>：选择已经被选中的内容</p>
+</li>
+<li><p><code>::after</code>：可以在元素后插入内容</p>
+</li>
+<li><p><code>::before</code>：可以在元素前插入内容</p>
+</li>
+</ul>
+<h3 id="样式渲染优先级"><a href="#样式渲染优先级" class="headerlink" title="样式渲染优先级"></a>样式渲染优先级</h3><ul>
+<li><p>越具体的选择器优先级权重越大：<code>!important</code>&gt;行内样式&gt;id选择器&gt;类与伪类选择器&gt;标签选择器&gt;通用选择器</p>
+</li>
+<li><p>权重相同时，后定义的样式会覆盖前面的样式</p>
+</li>
+<li><p>继承自父元素的权重最低</p>
+</li>
+</ul>
+<h2 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h2><h3 id="预定义的颜色值"><a href="#预定义的颜色值" class="headerlink" title="预定义的颜色值"></a>预定义的颜色值</h3><p>black、white、red、green、blue、lightblue等。</p>
+<h3 id="16进制表示法"><a href="#16进制表示法" class="headerlink" title="16进制表示法"></a>16进制表示法</h3><p>使用6位16进制表示颜色，例如：<code>#ADD8E6</code>，其中第1-2位表示红色，第3-4位表示绿色，第5-6位表示蓝色</p>
+<ul>
+<li>简写方式：<code>#ABC</code> = <code>#AABBCC</code></li>
+<li><a target="_blank" rel="noopener" href="https://encycolorpedia.cn/">16进制颜色代码转换</a></li>
+</ul>
+<h3 id="RGB表示法"><a href="#RGB表示法" class="headerlink" title="RGB表示法"></a>RGB表示法</h3><p><code>rgb(173,216,230)</code></p>
+<h3 id="RGBA表示法"><a href="#RGBA表示法" class="headerlink" title="RGBA表示法"></a>RGBA表示法</h3><p><code>rgba(173,216,230,0.5)</code></p>
+<p>前三个数与RGB相同，第四个数表示透明度</p>
+
                 
             </div>
             <hr/>
