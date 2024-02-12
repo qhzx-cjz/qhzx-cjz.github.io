@@ -5,12 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="CSS学习笔记, Ost$&#39;s Blog">
-    <meta name="description" content="CSS1. 样式定义方式行内样式表直接定义在标签的style属性中  
-
-作用范围为当前标签
-
-例如
-1&amp;lt;img src=&#34;/static/images/225.jpg&#34; alt=&#34;&#34; style=&#34;width: 1920px; he">
+    <meta name="description" content="CSS学习 from 2024-01-31 to 2024-02-05">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -516,6 +511,102 @@
 <h3 id="RGB表示法"><a href="#RGB表示法" class="headerlink" title="RGB表示法"></a>RGB表示法</h3><p><code>rgb(173,216,230)</code></p>
 <h3 id="RGBA表示法"><a href="#RGBA表示法" class="headerlink" title="RGBA表示法"></a>RGBA表示法</h3><p><code>rgba(173,216,230,0.5)</code></p>
 <p>前三个数与RGB相同，第四个数表示透明度</p>
+<h2 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h2><h3 id="text-align"><a href="#text-align" class="headerlink" title="text-align"></a><code>text-align</code></h3><p>CSS属性<code>text-align</code>定义行内内容如何相对于它的块父元素对齐。text-align并不控制块元素自己的对齐，只控制它的行内元素的对齐</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-align">对齐方式</a></li>
+</ul>
+<h3 id="line-height"><a href="#line-height" class="headerlink" title="line-height"></a><code>line-height</code></h3><p>CSS属性<code>line-height</code>用于设置多行元素的空间量，如多行文本的间距。对于块级元素，它指定元素行盒（line boxes）的最小高度。对于非替代的 inline 元素，它用于计算行盒（line box）的高度。</p>
+<ul>
+<li><p>将<code>line-height</code>值设置为与块高相同可以实现文本上下居中</p>
+</li>
+<li><p>长度单位</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>单位</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>px</td>
+<td>设备上的像素点</td>
+</tr>
+<tr>
+<td>%</td>
+<td>相对于父元素的百分比</td>
+</tr>
+<tr>
+<td>em</td>
+<td>相对于当前元素的字体大小</td>
+</tr>
+<tr>
+<td>rem</td>
+<td>相对于根元素的字体大小</td>
+</tr>
+<tr>
+<td>vw</td>
+<td>相对于视窗宽度的百分比</td>
+</tr>
+<tr>
+<td>vh</td>
+<td>相对于视窗高度的百分比</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="text-indent"><a href="#text-indent" class="headerlink" title="text-indent"></a><code>text-indent</code></h3><p>属性<code>text-indent</code>定义块元素首行文本内容之前的锁紧量</p>
+<h3 id="text-decoration"><a href="#text-decoration" class="headerlink" title="text-decoration"></a><code>text-decoration</code></h3><p>属性<code>text-decoration</code>用于设置文本的修饰线外观：下划线(<code>underline</code>)、点划线(<code>underline dotted</code>)、上划线(<code>overline</code>)、波浪线(<code>wavy </code>)等等</p>
+<p>例如</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">/* 下划线 */</span><br><span class="line">.under {</span><br><span class="line">  text-decoration: underline red;</span><br><span class="line">}</span><br><span class="line">/* 绿色波浪上划线 */</span><br><span class="line">.over {</span><br><span class="line">  text-decoration: wavy overline lime;</span><br><span class="line">}</span><br><span class="line">/* 贯穿线 */</span><br><span class="line">.line {</span><br><span class="line">  text-decoration: line-through;</span><br><span class="line">}</span><br><span class="line">/* 移除链接默认的下划线 */</span><br><span class="line">.plain {</span><br><span class="line">  text-decoration: none;</span><br><span class="line">}</span><br><span class="line">/* 上下划线 */</span><br><span class="line">.underover {</span><br><span class="line">  text-decoration: dashed underline overline;</span><br><span class="line">}</span><br><span class="line">/* 加粗(4px)的紫色下划线 */</span><br><span class="line">.thick {</span><br><span class="line">  text-decoration: solid underline purple 4px;</span><br><span class="line">}</span><br><span class="line">/* 闪烁下划线 */</span><br><span class="line">.blink {</span><br><span class="line">  text-decoration: blink;</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>部分下划线的显示效果取决于使用的浏览器</li>
+</ul>
+<h3 id="text-shadow"><a href="#text-shadow" class="headerlink" title="text-shadow"></a><code>text-shadow</code></h3><p>为文字添加阴影，可以为文字和<code>decoration</code>添加多个阴影，每个阴影值用逗号隔开；一个阴影值由四个值构成，分别是元素在X和Y方向的偏移量、模糊半径和颜色值。</p>
+<p>例如</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/* offset-x | offset-y | blur-radius | color */</span><br><span class="line">.shadow {</span><br><span class="line">    text-shadow: 2px 2px 1px lightblue;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><h3 id="font-size"><a href="#font-size" class="headerlink" title="font-size"></a><code>font-size</code></h3><p>指定字体大小，因为该属性的值会被用于计算em和ex长度单位，定义该值可能改变其他元素的大小</p>
+<h3 id="font-style"><a href="#font-style" class="headerlink" title="font-style"></a><code>font-style</code></h3><figure class="highlight plaintext"><figcaption><span>CSS 属性允许你选择```font-family```字体下的 italic 或 oblique 样式。</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* Italic 字体一般是现实生活中的草书</span><br><span class="line"></span><br><span class="line">* oblique 字体一般只是常规字形的倾斜版本</span><br><span class="line"></span><br><span class="line">### ```font-weight```</span><br><span class="line">```font-weight```属性指定了字体的粗细程度。 一些字体只提供 normal 和 bold 两种值。</span><br><span class="line"></span><br><span class="line">### ```font-family```</span><br><span class="line">属性```font-family```通过给定一个有先后顺序的，由字体名或者字体族名组成的列表来为选定的元素设置字体。</span><br><span class="line">属性值用逗号隔开。浏览器会选择 **列表中** **第一个** 该**计算机上有安装**的字体，或者是通过 ```@font-face``` 指定的可以直接下载的字体。</span><br><span class="line"></span><br><span class="line">## 背景</span><br><span class="line"></span><br><span class="line">### ```background-color```</span><br><span class="line"></span><br><span class="line">设置元素的背景颜色，属性的值为颜色值或关键字”transparent”二者选其一。</span><br><span class="line"></span><br><span class="line">### ```background-image```</span><br><span class="line"></span><br><span class="line">CSS```background-image```属性用于为一个元素设置一个或者多个背景图像。</span><br><span class="line"></span><br><span class="line">* 可以将背景设置为渐变色：```linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5))```</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### ```background-size```</span><br><span class="line"></span><br><span class="line">```background-size```设置图片大小</span><br><span class="line">* cover：此时会保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小。</span><br><span class="line"></span><br><span class="line">* contain：	此时会保持图像的纵横比并将图像缩放成将适合背景定位区域的最大大小。</span><br><span class="line"></span><br><span class="line">### ```background-repeat```</span><br><span class="line"></span><br><span class="line">```background-repeat```CSS 属性定义背景图像的重复方式。背景图像可以沿着水平轴，垂直轴，两个轴重复，或者根本不重复。</span><br><span class="line"></span><br><span class="line">### ```background-position```</span><br><span class="line"></span><br><span class="line">```background-position```为背景图片设置初始位置</span><br><span class="line"></span><br><span class="line">### ```background-attachment```</span><br><span class="line"></span><br><span class="line">```background-attachment```CSS属性决定背景图像的位置是在视口内固定，或者随着包含它的区块滚动。</span><br><span class="line"></span><br><span class="line">* fixed：此关键属性值表示背景相对于视口固定。即使一个元素拥有滚动机制，背景也不会随着元素的内容滚动。</span><br><span class="line"></span><br><span class="line">* local：此关键属性值表示背景相对于元素的内容固定。如果一个元素拥有滚动机制，背景将会随着元素的内容滚动，并且背景的绘制区域和定位区域是相对于可滚动的区域而不是包含他们的边框。</span><br><span class="line"></span><br><span class="line">* scroll：此关键属性值表示背景相对于元素本身固定，而不是随着它的内容滚动（对元素边框是有效的）</span><br><span class="line"></span><br><span class="line">## 边框</span><br><span class="line"></span><br><span class="line">* 分别对边框四边进行设置时，按照顺时针方向设置</span><br><span class="line"></span><br><span class="line">### ```border-style```</span><br><span class="line"></span><br><span class="line">设定元素全部边框的样式</span><br><span class="line"></span><br><span class="line">* 样式</span><br><span class="line">&lt;table&gt;</span><br><span class="line">      &lt;thead&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">          &lt;th&gt;&lt;code&gt;none&lt;/code&gt;&lt;/th&gt;</span><br><span class="line">          &lt;th&gt;&lt;/th&gt;</span><br><span class="line">          &lt;th&gt;和关键字 &lt;code&gt;hidden&lt;/code&gt; 类似，不显示边框。在这种情况下，如果没有设定背景图片，&lt;a href="/zh-CN/docs/Web/CSS/border-width"&gt;&lt;code&gt;border-width&lt;/code&gt;&lt;/a&gt; 计算后的值将是 &lt;code&gt;0&lt;/code&gt;，即使先前已经指定过它的值。在单元格边框重叠情况下，&lt;code&gt;none&lt;/code&gt; 值优先级最低，意味着如果存在其他的重叠边框，则会显示为那个边框。&lt;/th&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">      &lt;/thead&gt;</span><br><span class="line">      &lt;tbody&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">          &lt;td&gt;&lt;code&gt;hidden&lt;/code&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;和关键字 &lt;code&gt;none&lt;/code&gt; 类似，不显示边框。在这种情况下，如果没有设定背景图片，&lt;a href="/zh-CN/docs/Web/CSS/border-width"&gt;&lt;code&gt;border-width&lt;/code&gt;&lt;/a&gt; 计算后的值将是 &lt;code&gt;0&lt;/code&gt;，即使先前已经指定过它的值。在单元格边框重叠情况下，&lt;code&gt;hidden&lt;/code&gt; 值优先级最高，意味着如果存在其他的重叠边框，边框不会显示。&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">          &lt;td&gt;&lt;code&gt;dotted&lt;/code&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;显示为一系列圆点。标准中没有定义两点之间的间隔大小，视不同实现而定。圆点半径是 &lt;a href="/zh-CN/docs/Web/CSS/border-width"&gt;&lt;code&gt;border-width&lt;/code&gt;&lt;/a&gt; 计算值的一半。&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">          &lt;td&gt;&lt;code&gt;dashed&lt;/code&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;显示为一系列短的方形虚线。标准中没有定义线段的长度和大小，视不同实现而定。&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">          &lt;td&gt;&lt;code&gt;solid&lt;/code&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;显示为一条实线。&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">          &lt;td&gt;&lt;code&gt;double&lt;/code&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;显示为一条双实线，宽度是 &lt;a href="/zh-CN/docs/Web/CSS/border-width"&gt;&lt;code&gt;border-width&lt;/code&gt;&lt;/a&gt; 。&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">          &lt;td&gt;&lt;code&gt;groove&lt;/code&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;显示为有雕刻效果的边框，样式与 &lt;code&gt;ridge&lt;/code&gt; 相反。&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">          &lt;td&gt;&lt;code&gt;ridge&lt;/code&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;显示为有浮雕效果的边框，样式与 &lt;code&gt;groove&lt;/code&gt; 相反。&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">          &lt;td&gt;&lt;code&gt;inset&lt;/code&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;显示为有陷入效果的边框，样式与 &lt;code&gt;outset&lt;/code&gt; 相反。当它指定到 &lt;a href="/zh-CN/docs/Web/CSS/border-collapse"&gt;&lt;code&gt;border-collapse&lt;/code&gt;&lt;/a&gt; 为 &lt;code&gt;collapsed&lt;/code&gt; 的单元格时，会显示为 &lt;code&gt;groove&lt;/code&gt; 的样式。&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">          &lt;td&gt;&lt;code&gt;outset&lt;/code&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;&lt;/td&gt;</span><br><span class="line">          &lt;td&gt;显示为有突出效果的边框，样式与 &lt;code&gt;inset&lt;/code&gt; 相反。当它指定到 &lt;a href="/zh-CN/docs/Web/CSS/border-collapse"&gt;&lt;code&gt;border-collapse&lt;/code&gt;&lt;/a&gt; 为 &lt;code&gt;collapsed&lt;/code&gt; 的单元格时，会显示为 &lt;code&gt;ridge&lt;/code&gt; 的样式。&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">      &lt;/tbody&gt;</span><br><span class="line">    &lt;/table&gt;</span><br><span class="line"></span><br><span class="line">* 可以分别设置四边边框样式</span><br></pre></td></tr></tbody></table></figure>
+<p>/* up right down left */<br>border-style: dotted inset solid outset;</p>
+<pre><code>
+
+### ```border-width```
+
+可以设定边框宽度
+
+### ```border-color```
+
+CSS属性```border-color```是一个用于设置元素四个边框颜色的快捷属性： ```border-top-color```, ```border-right-color```, ```border-bottom-color```, ```border-left-color```
+
+### ```border-radius```
+
+CSS 属性```border-radius```设置元素的外边框圆角。当使用一个半径时确定一个圆形，当使用两个半径时确定一个椭圆。这个(椭)圆与边框的交集形成圆角效果。
+
+### ```border-collapse```
+
+CSS```border-collapse```属性是用来决定表格的边框是分开的还是合并的。在分隔模式下，相邻的单元格都拥有独立的边框。在合并模式下，相邻单元格共享边框。
+
+## 元素展示格式
+
+### display
+
+* ```block```:
+    * 独占一行
+    * width、height、margin、padding均可控制
+    * width默认100%
+* ```inline```:
+    * 可以共占一行
+    * width和height无效，水平方向上的margin和padding有效，垂直方向上的argin和padding无效
+    * width默认为本身内容的宽度
+* ```inline-block```:
+    * 可以共占一行
+    * width、height、margin、padding均可控制
+    * width默认为本身内容的宽度
+</code></pre>
 
                 
             </div>
@@ -944,7 +1035,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            CSS学习 from 2024-01-31 to 2024-02-05
                         
                     </div>
                     <div class="publish-info">
@@ -990,7 +1081,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            git学习
                         
                     </div>
                     <div class="publish-info">
