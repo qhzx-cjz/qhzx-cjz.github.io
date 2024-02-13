@@ -706,7 +706,18 @@
 <li><p><code>pre-line</code>：连续的空白符会被合并。在遇到换行符或<code>&lt;br&gt;</code>元素时，或者根据填充行框盒子进行换行。</p>
 </li>
 </ul>
-<h3 id="text-overflow"><a href="#text-overflow" class="headerlink" title="text-overflow"></a><code>text-overflow</code></h3>
+<h3 id="text-overflow"><a href="#text-overflow" class="headerlink" title="text-overflow"></a><code>text-overflow</code></h3><p>用于确定如何提示用户存在隐藏的溢出内容。其形式可以是裁剪、显示一个省略号（“…”）或显示一个自定义字符串。</p>
+<h3 id="overflow"><a href="#overflow" class="headerlink" title="overflow"></a><code>overflow</code></h3><p>CSS属性<code>overflow</code>定义当一个元素的内容太大而无法适应 块级格式化上下文 时候该做什么。它是<code>overflow-x</code>和<code>overflow-y</code>的 简写属性。</p>
+<p>常用取值：</p>
+<ul>
+<li><p>auto：自动根据文本内容和边距盒提供滚动条</p>
+</li>
+<li><p>scroll：如果需要，内容将被裁减以适应边距盒。无论是否实际裁剪了任何内容，浏览器总是显示滚动条，以防止滚动条在内容改变时出现或者消失。</p>
+</li>
+<li><p>hidden：内容将被裁减以适应边距盒。不提供滚动条，也不支持允许用户滚动（例如通过拖拽或者使用滚轮）。</p>
+</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -1604,14 +1615,6 @@ $(function () {
     
 
     <!-- 雪花特效 -->
-     
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
-            }
-        </script>
     
 
     <!-- 鼠标星星特效 -->
