@@ -717,6 +717,84 @@
 <li><p>hidden：内容将被裁减以适应边距盒。不提供滚动条，也不支持允许用户滚动（例如通过拖拽或者使用滚轮）。</p>
 </li>
 </ul>
+<h2 id="内外边距"><a href="#内外边距" class="headerlink" title="内外边距"></a>内外边距</h2><h3 id="margin"><a href="#margin" class="headerlink" title="margin"></a><code>margin</code></h3><p>CSS<code>margin</code>属性给元素设置所有四个方向的外边距属性</p>
+<ul>
+<li><p>按照顺时针顺序设置</p>
+</li>
+<li><p>可以分别设置：<code>margin-top</code>,<code>margin-right</code>,<code>margin-bottom</code>,<code>margin-left</code></p>
+</li>
+<li><p>取值：</p>
+<ul>
+<li>length：固定值</li>
+<li>percentage：相对于<strong>包含块</strong>的宽度，以百分比值为外边距</li>
+<li>auto：让浏览器自己选择一个合适的外边距。有时，在一些特殊情况下，该值可以使元素居中。</li>
+</ul>
+</li>
+<li><p>常见BUG：设定块内元素外边距会导致包含块元素上边一直和块内元素上边重合，表现为块内元素<strong>拖着</strong>包含块走。  </p>
+<ul>
+<li>解决方法：在包含块前加一个空的伪元素<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.parent::before {</span><br><span class="line">  content: " ";</span><br><span class="line">  display: table;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></li>
+</ul>
+</li>
+<li><p>子元素在父元素内居中</p>
+<ul>
+<li>方法一：<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">.parent {</span><br><span class="line">  width: 500px;</span><br><span class="line">  height: 300px;</span><br><span class="line">  background-color: orange;</span><br><span class="line">  position: relative;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">.parent::before {</span><br><span class="line">  content: "";</span><br><span class="line">  display: table;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">.son {</span><br><span class="line">  width: 100px;</span><br><span class="line">  height: 100px;</span><br><span class="line">  background-color: lightblue;</span><br><span class="line">  top: 0;</span><br><span class="line">  right: 0;</span><br><span class="line">  bottom: 0;</span><br><span class="line">  left: 0;</span><br><span class="line">  position: absolute;</span><br><span class="line">  margin: auto;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li>方法2<blockquote>
+<p>MDN：实现在父元素中居中，可使用 margin: 0 auto;<br>实际上</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>外边距塌陷问题：</p>
+<ul>
+<li><p>块的上外边距(margin-top)和下外边距(margin-bottom)有时合并(折叠)为单个边距，其大小为单个边距的最大值(或如果它们相等，则仅为其中一个)，这种行为称为边距折叠。</p>
+</li>
+<li><p>父元素与后代元素：父元素没有上边框和padding时，后代元素的margin-top会溢出，溢出后父元素的margin-top会与后代元素取最大值。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="padding"><a href="#padding" class="headerlink" title="padding"></a><code>padding</code></h3><p>CSS<code>padding</code>属性控制元素的四条内边距区域</p>
+<ul>
+<li>可以接受1~4个值(上右下左)</li>
+<li>可以分别指明四个方向：<code>padding-top</code>、<code>padding-right</code>、<code>padding-bottom</code>、<code>padding-left</code></li>
+<li>取值  <ul>
+<li>length：固定值</li>
+<li>percentage：相对于包含块宽度的百分比值</li>
+</ul>
+</li>
+</ul>
+<h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><p><code>box-sizing</code></p>
+<p>实际显示的元素宽度=元素定义宽度+内边距宽度+边框宽度，增加内边距和边框宽度都会使元素宽度变大，这是由于<code>box-sizing</code>属性被设置为了<code>content-box</code>，如果不希望这样，可以将<code>box-sizing</code> 设置为<code>border-box</code>，此时增加内边距和边框宽度会压缩元素内容宽度使元素实际显示的总宽度不变</p>
+<h2 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h2><h3 id="position"><a href="#position" class="headerlink" title="position"></a><code>position</code></h3><p>CSS<code>position</code>属性用于指定一个元素在文档中的定位方式。<strong>top</strong>，<strong>right</strong>，<strong>bottom</strong> 和 <strong>left</strong> 属性则决定了该元素的最终位置。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">position: absolute;</span><br><span class="line">top: 0;</span><br><span class="line">right: 0;</span><br><span class="line">bottom: 0;</span><br><span class="line">left: 0;   </span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="定位类型"><a href="#定位类型" class="headerlink" title="定位类型"></a>定位类型</h4><ul>
+<li><p>定位元素：是其计算后位置属性为 <code>relative</code>, <code>absolute</code>, <code>fixed</code> 或 <code>sticky</code> 的一个元素（换句话说，除<code>static</code>以外的任何东西）。</p>
+</li>
+<li><p>相对定位元素：计算后位置属性为 <code>relative</code>的元素。</p>
+</li>
+<li><p>绝对定位元素：计算后位置属性为 <code>absolute</code> 或 <code>fixed</code> 的元素。</p>
+</li>
+<li><p>粘性定位元素：计算后位置属性为 <code>sticky</code> 的元素。</p>
+</li>
+</ul>
+<h4 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h4><ul>
+<li><p><code>static</code>：该关键字使用正常的布局行为，即元素在文档常规流中的布局位置</p>
+</li>
+<li><p><code>absolute</code>：元素会被移出正常文档流，并不为元素预留空间，通过指定元素相对于最近的非<code>static</code>定位祖先元素的偏移，来确定元素位置。绝对定位的元素可以设置外边距（margins），且不会与其他边距合并。</p>
+</li>
+<li><p><code>fixed</code>：元素会被移出正常文档流，并不为元素预留空间，而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。</p>
+</li>
+<li><p><code>reletive</code>：该关键字下，元素先放置在未添加定位时的位置，再在不改变页面布局的前提下调整元素位置（因此会在此元素未添加定位时所在位置留下空白）。top, right, bottom, left等调整元素相对于初始位置的偏移量。</p>
+</li>
+<li><p><code>sticky</code>：元素根据正常文档流进行定位，然后相对它的最近滚动祖先(nearest scrolling ancestor)和 containing block (最近块级祖先 nearest block-level ancestor)，包括table-related元素，基于top, right, bottom, 和 left的值进行偏移。偏移值不会影响任何其他元素的位置。</p>
+</li>
+</ul>
+<div class="box" id="example-element" style="position: sticky; top: 20px;">例如</div>
+
 
                 
             </div>
